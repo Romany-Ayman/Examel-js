@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>routeegy</title>
+    <link
+      rel="shortcut icon"
+      href="image/event-icon-vector.jpg"
+      type="image/x-icon"
+    />
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/all.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <!-- ------------------Home---------- -->
+
+    <div class="loading d-none">
+      <span class="loader"></span>
+   </div>
+   
+    <section class="home sailder" id="home">
+      <nav class="">
+        <div class="linkNav">
+          <div class="contaA">
+            <ul class="p-0">
+              <li>
+                <span class=""
+                  ><a href="#home" id="Search" data-category="search"
+                    >Search</a
+                  ></span
+                >
+              </li>
+              <li>
+                <span class=""
+                  ><a href="#Duration" data-category="Categories" id="Categories"
+                    >Categories</a
+                  ></span
+                >
+              </li>
+              <li>
+                <span class=""
+                  ><a href="#Details"  id="area">Area</a></span
+                >
+              </li>
+              <li>
+                <span class=""
+                  ><a href="#Contac" id="Ingredients"
+                    >Ingredients</a
+                  ></span
+                >
+              </li>
+              <li>
+                <span class=""
+                  ><a href="#formInput" id="showForm">Contact Us</a></span
+                >
+              </li>
+            </ul>
+          </div>
+
+          <div class="row align-content-end justify-content-center">
+            <div class="d-flex justify-content-start gap-2 align-items-end">
+              <span><i class="fa-solid fa-globe"></i></span>
+              <span><i class="fa-brands fa-facebook"></i></span>
+              <span><i class="fa-brands fa-twitter"></i></span>
+            </div>
+            <p>Copyright Â© 2019 All Rights Reserved.</p>
+          </div>
+        </div>
+        <div class="bg-light open row justify-content-center text-center">
+          <div class="d-flex justify-content-center align-content-center mt-3">
+            <span> <img src="image/logo.png" class="imgSild" alt="" /></span>
+          </div>
+
+          <div class="iconeOpena align-content-center">
+            <span id="texth"><i class="fa-solid fa-bars slecat"></i></span>
+          </div>
+          <div class="row align-content-end justify-content-center">
+            <span><i class="fa-solid fa-globe"></i></span>
+            <span><i class="fa-solid fa-share-nodes"></i></span>
+          </div>
+        </div>
+      </nav>
+    </section>
+
+    <!-- ______________card__________________ -->
+    <section>
+      <div class="container cardSter mt-2">
+        <div class="row g-4 mx-auto" id="rowData"></div>
+      </div>
+    </section>
+    <!-- -------------form------------ -->
+
+    <section>
+      <div id="formInput" class="container formInput">
+        <form
+          class="row gx-3 gy-4 needs-validation justify-content-between formInputf p-3"
+          novalidate
+        >
+          <div class="col-md-6 position-relative">
+            <input
+              type="text"
+              class="form-control"
+              id="nameInput"
+              placeholder="Enter your Name"
+              required
+            />
+            <div class="alert alert-danger p-0 invalid-feedback">
+              Special characters and numbers not allowed
+            </div>
+          </div>
+          <div class="col-md-6 position-relative">
+            <input
+              type="email"
+              class="form-control"
+              id="inputEmail"
+              placeholder="Enter your Email"
+              required
+            />
+            <div class="alert alert-danger p-0 invalid-feedback">
+              Email not valid *exemple@yyy.zzz
+            </div>
+          </div>
+          <div class="col-md-6 position-relative">
+            <input
+              type=" tel"
+              class="form-control"
+              id="inputPhone"
+              placeholder="Enter your phone"
+              required
+            />
+            <div class="alert alert-danger p-0 invalid-feedback">
+              Enter valid Phone Number
+            </div>
+          </div>
+          <div class="col-md-6 position-relative">
+            <input
+              type="number"
+              class="form-control"
+              id="inputAge"
+              placeholder="Enter your Age"
+              required
+            />
+            <div class="alert alert-danger p-0 invalid-feedback">
+              Enter valid age
+            </div>
+          </div>
+          <div class="col-md-6 position-relative">
+            <input
+              type="password"
+              class="form-control"
+              id="inputPassword"
+              placeholder="Enter your password"
+              required
+            />
+            <div class="alert alert-danger p-0 invalid-feedback">
+              Minimum eight characters, at least one letter and one number
+            </div>
+          </div>
+          <div class="col-md-6 position-relative">
+            <input
+              type="password"
+              class="form-control"
+              id="reinputPassword"
+              placeholder="Enter your Repassword"
+              required
+            />
+            <div class="alert alert-danger p-0 invalid-feedback">
+              Enter valid repassword
+            </div>
+          </div>
+          <div class="text-center">
+            <button
+              class="btn btn-outline-danger disabled btnForm"
+              type="submit"
+            >
+              Submit
+            </button>
+          </div>
+        </form>
+      </div>
+    </section>
+    <!-- -------------- InputSearch---------------- -->
+    <section>
+      <div class="container mt-4" id="searchInput">
+        <div class="searchInput row">
+          <div class="col-md-6 position-relative">
+            <input
+              type="text"
+              class="form-control"
+              id="searchName"
+              placeholder="Search By Name"
+              required
+            />
+          </div>
+          <div class="col-md-6 position-relative">
+            <input
+              type=" text"
+              class="form-control"
+              id="singleLetterInput"
+              placeholder="Search By First Letter"
+              required
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>
+<p class="text-center lead"></p>

@@ -1,0 +1,168 @@
+:root {
+  scroll-behavior: auto;
+}
+.loading {
+  position: fixed;
+  z-index: 9999;
+  inset: 0;
+  background-color: #272b30e3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.loader {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  display: inline-block;
+  border-top: 4px solid #fff;
+  border-right: 4px solid transparent;
+  box-sizing: border-box;
+  animation: rotation 1s linear infinite;
+  position: relative;
+}
+.loader::after {
+  content: "";
+  box-sizing: border-box;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  border-left: 4px solid #ff3d00;
+  border-bottom: 4px solid transparent;
+  animation: rotation 0.5s linear infinite reverse;
+}
+@keyframes rotation {
+  0% {
+     transform: rotate(0deg);
+  }
+  100% {
+     transform: rotate(360deg);
+  }
+}
+
+/* *************************home**************** */
+body {
+  height: 100vh;
+  width: 100%;
+
+  background-color: rgb(11, 11, 11);
+  background-blend-mode: overlay;
+  background-position: center;
+  position: relative;
+  background-attachment: fixed;
+  background-size: cover;
+  color: #fff;
+}
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 200px;
+  height: 100vh;
+  z-index: 99;
+
+  display: flex;
+}
+.home a {
+  font-size: 16px;
+  text-decoration: none;
+  color: #fff;
+  transition: all 1s;
+}
+.contaA {
+  position: relative;
+  overflow: hidden;
+}
+
+.linkNav {
+  background-color: rgb(23, 25, 25);
+  overflow: hidden;
+  width: 100%;
+  text-decoration: none;
+  display: none;
+  overflow: hidden;
+}
+.linkNav li {
+  list-style-type: none;
+}
+.linkNav li:hover a {
+  color: red;
+}
+
+.open {
+  color: #111010;
+
+  width: 60px;
+}
+.open .slecat {
+  font-size: 30px;
+}
+.open i {
+  cursor: pointer;
+}
+.imgSild {
+  width: 40px;
+}
+/* =================Card==== */
+
+.mealCont {
+  overflow: hidden;
+  transition: all 1s;
+  cursor: pointer;
+  border-radius: 8%;
+}
+.categoriesMeal {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #fffbfd;
+  top: 110%;
+  transition: all 1s;
+  overflow: hidden;
+  z-index: 100000;
+}
+.categoriesMeal h3 {
+  color: black;
+}
+.categoriesMeal p {
+  color: #111010;
+}
+.mealCont:hover .categoriesMeal {
+  top: 0;
+}
+/* ================detalesCard====== */
+.detalesCard {
+  width: 90%;
+  margin: auto;
+}
+.elrtDatels {
+  background-color: #cff4fc;
+  color: rgb(62, 52, 52);
+  border-radius: 8%;
+  padding: 3px;
+  margin: 5px;
+}
+.alertTags {
+  background-color: #f8d7da;
+  color: #d91e2d;
+  border-radius: 8%;
+  padding: 3px;
+  margin: 5px;
+}
+
+/* <<<<<<<<<<<<<<<<<<<<Form>>>>>>>>>>>>>>>>>>>>>>>> */
+.formInput {
+  width: 70%;
+  margin-top: 200px;
+  display: none;
+}
+/* _________________________searchInput____________ */
+#searchInput {
+  display: none;
+}
