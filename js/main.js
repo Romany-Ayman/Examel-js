@@ -216,7 +216,7 @@ function displayArea(area) {
     for (let i = 0; i < area.length; i++) {
         cartoona += `
         <div class="col-md-3">
-                <div onclick="getAreaMeals('${area[i].strArea}')" class="rounded-2 text-center cursor-pointer">
+                <div onclick="getfiltarea('${area[i].strArea}')" class="rounded-2 text-center cursor-pointer">
                         <i class="fa-solid fa-house-laptop fa-4x"></i>
                         <h3>${area[i].strArea}</h3>
                        
@@ -332,7 +332,29 @@ function displayFilter(filter){
     document.getElementById('rowData').innerHTML = contentss;
 }
 
-
+// ====================filterarea==============
+async function getfiltarea(area){
+    let response=await fetch(`https://www.themealdb.com/api/json/v1/1/filter.php?a=${area}`)
+    response=  await response.json()
+    console.log(response);
+    displayFilterArea(response.meals)
+}
+ function displayFilterArea(filterArea){
+    let content = ``;
+    for (let i = 0; i < filterArea.length; i++) {
+        let idMeal=filterArea[i].idMeal
+        content += `
+                <div class="col-md-3 mealCont position-relative " onclick="showDetails(${filterArea[i].idMeal})">
+                    <img src="${filterArea[i].strMealThumb}" class="w-100" alt="" />
+                    <div class="categoriesMeal d-flex justify-content-center align-items-center">
+                        <h3 class="h1 textImg">${filterArea[i].strMeal}</h3>
+                        <p></p>
+                    </div>
+                </div>
+            `;
+    }
+    document.getElementById('rowData').innerHTML = content;
+ }
 // >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>formValed<<<<<<<<<
 
 function validateName() {
