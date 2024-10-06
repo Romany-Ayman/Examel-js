@@ -170,17 +170,19 @@ async function getCategory(){
 
 function displayCategory(category){
     let content = ``;
+
+    
     
      
 
     for (let i = 0; i < category.length; i++) {
-        let nameCatrgory=category[i].strCategory
+        let nameCatrgory = category[i].strCategory
 
             
         content += `
 
        
-                <div class="col-md-3 mealCont position-relative " onclick=" getCategoryFilter('${category[i].strCategory}')">
+                <div class="col-md-3 mealCont position-relative " onclick=" getCategoryFilter('${nameCatrgory}')">
                     <img src="${category[i].strCategoryThumb}" class="w-100" alt="" />
                     <div class="categoriesMeal ">
                         <h3 class="h1 textImg">${category[i].strCategory}</h3>
@@ -252,12 +254,12 @@ function displayingrediend(ing){
 
        
         <div class="col-md-3">
-        <div onclick="getCategoryFilter('${ing[i].strIngredient}')" class="rounded-2 text-center cursor-pointer">
+        <div onclick="getCategoryFilter('${nameCatrgory}')" class="rounded-2 text-center cursor-pointer">
                 <i class="fa-solid fa-house-laptop fa-4x"></i>
                 <h3>${ing[i].strIngredient}</h3>
-                <p  class="text-center ">"${ing[i].strDescription}</p>
+                <p  class="text-center ">"${ing[i].strDescription.split(" ").slice(0, 10).join(" ")}</p>
         </div>
-</div>
+    </div>
             `;
     }
 
@@ -289,7 +291,7 @@ async function displayFiltIngrd(FilterIng){
             
         content += `
        
-                <div class="col-md-3 mealCont position-relative " onclick="showDetails(${FilterIng[i].idMeal})">
+                <div class="col-md-3 mealCont position-relative " onclick="showDetails(${idMeal})">
                     <img src="${FilterIng[i].strMealThumb}" class="w-100" alt="" />
                     <div class="categoriesMeal d-flex justify-content-center align-items-center">
                         <h3 class="h1 textImg">${FilterIng[i].strMeal}</h3>
@@ -315,12 +317,12 @@ async function getCategoryFilter(category) {
 function displayFilter(filter){
     let contentss = ``
     for (let i = 0; i < filter.length; i++) {
-        let idMeal=filter[i].idMeal
+        let idMeal =filter[i].idMeal
 
             
         contentss += `
        
-                <div class="col-md-3 mealCont position-relative " onclick="showDetails(${filter[i].idMeal})">
+                <div class="col-md-3 mealCont position-relative " onclick="showDetails(${idMeal})">
                     <img src="${filter[i].strMealThumb}" class="w-100" alt="" />
                     <div class="categoriesMeal d-flex justify-content-center align-items-center">
                         <h3 class="h1 textImg">${filter[i].strMeal}</h3>
